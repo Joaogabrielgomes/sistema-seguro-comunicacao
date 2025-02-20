@@ -1,28 +1,15 @@
-# Projeto Sistema Seguro de Comunicação
+## Projeto Sistema Seguro de Comunicação
+
 ### Participantes:
 * Brenno de Sousa Lemos - 11222100597
 * Bruna de Medeiros Santos - 11222101313
 * Iago Alves de Oliveira - 11242400738
 * João Gabriel Gomes - 11222101048
 
-### Objetivo do projeto
-Segurança na comunicação entre funcionários.
-### Tecnologias utilizadas
-* <b>bcrypt</b> → Hashing seguro de senhas.
-* <b>PyJWT</b> → Autenticação via Tokens JWT.
-* <b>cryptography</b> → Implementação de AES e RSA.
-### Fluxo básico do sistema
-* Usuário faz cadastro (senha armazenada com bcrypt).
-* Usuário faz login (autenticado via JWT).
-* Usuário envia uma mensagem criptografada com AES.
-* Apenas o destinatário correto pode descriptografar com sua chave RSA.
-### Principais etapas de implementação, incluindo
-* <b>Cadastro de usuário</b> → Hash de senha com bcrypt.
-* <b>Login</b> → Geração e verificação de Token JWT.
-* <b>Criptografia de mensagens</b> → Uso de AES (CBC).
-* <b>Proteção da chave AES</b> → Uso de RSA para criptografar a chave antes de armazená-la.
-### Descrição do que o sistema faz
-* <b>Cadastro de usuário</b> → Protege a senha com bcrypt antes de armazenar.
-* <b>Login</b> → Se a senha estiver correta, gera um Token JWT.
-* <b>Enviar mensagem</b> → A mensagem é criptografada com AES antes de ser salva.
-* <b>Receber mensagem</b> → O usuário descriptografa com RSA sua chave AES e acessa a mensagem.
+### Breve explicação
+O objetivo do projeto consiste em implementar criptografia simétrica (AES), criptografia assimétrica (RSA), hashing de senhas (bcrypt) e autenticação com Tokens JWT (JSON Web Token) dentro do contexto de um sistema seguro de comunicação.
+
+### Cenário
+Uma empresa deseja garantir a segurança da comunicação entre seus funcionários, protegendo mensagens sensíveis contra acessos não autorizados.<br>
+Para isso, um sistema interno está sendo desenvolvido, e a equipe de segurança foi designada para implementar os módulos de autenticação e criptografia da aplicação.<br>
+O foco da implementação será garantir a segurança das credenciais dos usuários e das mensagens armazenadas, por meio de métodos modernos de criptografia e autenticação.
